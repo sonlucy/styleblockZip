@@ -1,0 +1,49 @@
+#container {
+  width:1000px;
+  margin:20px auto; /*위,아래에는 20px, 왼오는 auto*/
+}
+h1 {
+  text-align:center;
+}
+.prod-list {
+  list-style:none;
+  padding:0;
+}
+.prod-list li {
+  float: left;
+  padding: 0;
+  margin: 10px;
+  overflow: hidden; /**/
+
+  /* position: relative; */
+  /* 교재대로 하려면 교재 참고 ! */
+}
+.prod-list img {
+  margin:0;
+  padding:0;
+  float:left;
+  z-index:5; /* 순서를 정의할 떄 사용하는 객체 (앞으로 오기, 뒤로 오기 같은 ) */
+  /* 인덱스의 우선순위가 5번째.(숫자가 높을 수록 우선순위 높음) 다른 요소보다 위에 있도록 설정. */
+} 
+
+.prod-list .caption { /* 평상시에는 안 보이고, 마우스가 올라갔을 떄 보여야함 */
+  position: absolute;
+  top: 295px;
+  width: 300px;
+  height: 180px;
+  padding-top: 20px;
+  background: rgb(0,0,0,0.6);
+  opacity: 0; /*화면에 보이지 않게*/
+  transition: all 0.6s ease-out; /*모든 객체 0.2s 후에*/
+  z-index: 10;
+}
+
+.prod-list li:hover .caption {
+  opacity: 1;
+  transform: translateY(-200px);
+}
+
+.prod-list .caption h2, .prod-list .caption p {
+  color: white;
+  text-align: center;
+}

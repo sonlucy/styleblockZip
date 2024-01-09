@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배경색 스타일</title>
+
+  <style>
+    div {
+      width: 300px;
+      height: 150px;
+      border-radius: 10px; /* 테두리 둥글게 */
+      /* background-color: blue; */
+    }
+
+    h3 {
+      font-weight: bold;
+      font-size: 17pt;
+      color: rgb(0,0,0, 0.5);/* 알파값을 줘서 투명도 조절. 투명도 50% */
+    }
+
+    #box1 {
+      float: left;
+    }
+
+    #box2 {
+      float: right;
+    }
+
+
+    .grad1 {
+      background-color: blue; /* CSS3 미지원 브라우저 */
+      background: -webkit-linear-gradient(right top,blue, white); /* 초기 사파리 브라우저용 */
+      /* 이게 귀찮으면 자바스크립트 뭐 다운받아야*/
+      background: linear-gradient(to right bottom, blue, white); /* 3.0부터는 to가 붙음. 한국은 대부분 이것만 쓰면 됨*/
+      /* 그라데이션 방향, 시작색, 종료색 */
+      /* 오른쪽 방향"으로 아래쪽으로 */
+    }
+    .grad2 {
+      background: #f00; /* 미지원 브라우저. 혹시라도. 사실상 정상적으로 css3가 제공된다면 필요없음.*/
+      background: linear-gradient(45deg, #ff0000, #ffffff); /* 45도 방향으로 */
+    }
+    .grad3 {
+      background: #06f;
+      background: linear-gradient(to right bottom, #06f,#fff 50%, pink);
+      /*(방향, 시작위치, 종료위치, 종료위치에서부터 다시 나가는 색상 )*/
+    }
+    .grad4 {
+      background: red;
+      background: radial-gradient(white, yellow,red);
+    }
+    .grad5 {
+      background: red;
+      background: radial-gradient(circle at 30% 30%, white, yellow, red);
+      /* 모양 at 중심 위치(생략 시 가운데), 중심색, 중간색, 종료색 */
+    }
+    .grad6 {
+      background: red;
+      background: radial-gradient(circle closest-corner at 30% 30%, white, yellow, red);
+      /* 모양 크기 지정 at 위십위치(생략 시 가운데), 중심색, 중간색, 종료색 */
+    }
+
+
+    .grad7 {
+      background: red;
+      background: repeating-linear-gradient(yellow, red 20px);
+
+    }
+    .grad8 {
+      background: red;
+      background: repeating-linear-gradient(yellow,yellow 20px, red 20px,red 40px);
+
+    }
+    .grad9 {
+      background: red;
+      background: repeating-radial-gradient(circle,yellow,red 10%);
+    }
+    .grad10 {
+      background: red;
+      background: repeating-radial-gradient(circle, yellow,yellow 10%, red 10%,red 20%);
+        
+    }
+
+  </style>
+</head>
+<body>
+  <div id="box1">
+
+    <div class="grad1"><h3>방향을 이용한 그라데이션</h3></div>
+    <div class="grad2"><h3>각도를 이용한 그라데이션</h3></div>
+    <div class="grad3"><h3>그라데이션 색상 중지점 적용</h3></div>
+    <div class="grad4"><h3>원형 그라데이션(기본)</h3></div>
+    <div class="grad5"><h3>원형 그라데이션(circle)</h3></div>
+    <div class="grad6"><h3>원형 그라데이션(circle)</h3></div>
+  
+  </div>
+
+  <div id="box2">
+    <h2>패턴 반복 그라데이션</h2>
+    <div class="grad7"><h3></h3></div>
+    <div class="grad8"><h3></h3></div>
+    <div class="grad9"><h3></h3></div>
+    <div class="grad10"><h3></h3></div>
+
+    
+
+  </div>
+
+</body>
+</html>

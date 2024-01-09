@@ -1,0 +1,145 @@
+@charset "utf-8";
+
+body {
+  font-family: "맑은 고딕", 굴림;
+  font-size: 14px;
+  
+}
+
+.container {
+  /* position: absolute; 요소를 절대적으로 배치. (상위 요소에 의해 배치) */
+  position: relative; /* 가운데로 가겟지 */
+  width: 960px;
+  margin: 0 auto; /* 화면 가운데 출력. 그러나 position을 절대적으로 줬기 때문에 왼쪽 정렬이 됨.(absolute를 줬기때문에 못 움직임) */
+  background-color: #fff;
+  border: 1px solid #cccbcb;
+}
+
+header {
+  position: relative; /* 요소의 원래 위치에서 상대적으로 배치 */
+  height: 280px;
+  background-image: url(/CSS/images/bg.png);
+  background-repeat: no repeat; /* 배경이미지 반복해제 */
+  background-position: left top;
+}
+
+header h1 {
+  /* 글자의 위치를 설정 */
+  position: absolute; /* 내 맘대로 위치 설정할거야 */
+  right: 20px;
+  bottom: 40px;
+  /* 텍스트 속성 */
+  color: #f6f7c2;
+  font-size: 3em; /* 16x3 px */
+  text-shadow: 2px 3px 2px #998268; /*2px만큼 오른쪽, 3px만큼 아래쪽, 번짐정도 2px, 색깔 */
+}
+
+header h2 {
+  /* 글자의 위치 설정 */
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  /* 텍스트 속성 */
+  color: #f8e95e;
+  font-size: 25px; /* 16px=1em */
+  text-shadow: 1px 1.5px 1.5px #998268;
+}
+
+/* 시맨틱 태그도 필요시 id, class를 적용 */
+.navi {
+  position: relative;
+  background-color: rgb(60, 75, 75);
+  margin-top: -15px;
+  width: 100%; /*container전체 다 쓰겟다. 960px*/
+  height: 60px;
+}
+
+.navi ul {
+  list-style: none;
+  float: right;
+  height: 40px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+.navi ul li {
+  /*옆으로 배치하지만, 인라인 전체가 하나의 블록으로 */
+  display: inline-block; 
+  font-size: 15px;
+}
+
+.navi ul li a, .navi ul li a:visited {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  width: 150px;
+
+}
+.navi ul li a:hover, .navi ul li a:focus {
+  text-shadow: 0px 2px 2px rgb(30, 34, 34);
+  color: #f8e95e;
+  
+}
+.navi ul li a:active {
+  text-shadow: 0px 2px 2px rgb(30, 34, 34);
+  color: #f8e95e;
+  background-color: red;
+}
+.navi ul li:nth-child(3) {
+  /* li 객체 중 앞에서부터 3번째 */
+  border: #ccc 1px dotted;
+}
+.navi ul li:nth-last-child(3) {
+  /* li 객체 중 뒤에서부터 3번째 */
+  background-color: green;
+}
+
+.sidebar {
+  float: right;
+  width: 200px;
+  height: 550px;
+  
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  background-color: rgb(227, 242, 248);
+}
+.sidebar img {
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  opacity: 0.5; /* 투명도 부여 */
+  text-align: center;
+
+}
+.sidebar img:hover {
+  border: 1px solid black;
+  opacity: 1;
+}
+
+.content {
+  float: left;
+  background-color: #fff;
+  padding-left: 10px;
+  padding-top: 5px;
+  width: 720px; /* 960-220(200+10+10)-10 = 730만큼 쓸 수 있음*/
+  /* height: 565px; */
+}
+
+footer {
+  height: 100px;
+  padding: 10px 0px;
+  background-color: rgb(13, 48, 80);
+  color: #fff;
+  text-align: center;
+  clear: both;
+}
+
+.banner {
+  margin: 0px 10px 15px 10px;
+}
+
+header, section, footer, article, aside, figure {
+  display: block; /* 태그는 우선순위가 낮기 떄문에 제일 먼저 적용.*/
+  /* 태그 < 클래스 < id < 인라인스타일 순으로 우선순위 */
+
+}

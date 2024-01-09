@@ -1,0 +1,158 @@
+
+  <style>
+    /* 전체 스타일 지정 */
+    * {
+      margin:0;
+      padding: 0;
+      box-sizing: border-box; /* 선 영역까지 전체를 박스 영역으로 잡아라 */
+    }
+    /*  공동 스타일 지정 */
+    a {
+      text-decoration: none; /*밑줄 없애기 */
+    }
+    ul {
+      list-style: none; /* 점모양 없애기 */
+    }
+    /**************** 헤더 영역 스타일(로고/네이게이션) **************/
+    header {
+      width: 100%;
+      height: 100px;
+      background-color: rgb(19, 151, 129);
+    }
+
+    #logo {
+      float: left; /* 왼쪽으로 플로팅 */
+      width: 300px;
+      height: 100px;
+      padding-left: 20px; /* 안쪽/왼쪽 여백 */
+      line-height: 100px; /* 세로 위치값 */
+      /* header height값이 100px이엇으니까 중간에 하려면 50px*/
+    }
+
+    /* logo:부모, h1:자식 */
+    #logo h1 {
+      font-family: 'Merienda', cursive;
+      font-size: 40px;
+      font-weight: 700;
+      color: white;
+      text-shadow: 0 -3px 0 rgb(7, 53, 9);
+    }
+
+    /* 헤더 영역 스타일(nav) */
+    nav {
+      float: right;
+      width: 800px;
+      height: 100px;
+      padding-top: 40px;
+    }
+    #topMenu {
+      height: 60px;
+    }
+    #topMenu li {
+      float: left;
+      position: relative;
+    }
+
+    #topMenu li a {
+      display: block;
+      font-size: 1.1em;
+      color: white;
+      font-weight: 600;
+      padding: 20px 30px; /* */
+    }
+
+    #topMenu li a:hover {
+      /* color: rgb(136, 221, 200); */
+      background-color: rgb(44, 44, 44);
+      text-shadow: 0 -2px rgb(29, 66, 39);
+    }
+    #container {
+      margin: 0 auto; /* 화면 중앙에 위치 */
+      width: 1200px;
+      background-color: white;
+    }
+    /********************** main 영역 *************************/
+    /* 클래스는 . 아이디는 # */
+    .contents {
+      width: 1100px;
+      height: 90%;
+      margin: 100px auto;
+    }
+
+    /* .image {
+      float: left;
+      border-radius: 5%;
+      
+    } */
+
+    main section {
+      margin-top: 50px;
+
+    }
+
+    main h2 {
+      font-size: 25px;
+      line-height: 2.5; /* 라인 높이를 2.5정도로 */
+    }
+
+    main h3 {
+      margin-top: 20px;
+    }
+
+    main div {
+      margin-top: 20px;
+    }
+
+    .detail p {
+      line-height: 2.0;
+      color: #222;
+    }
+
+    .detail img {
+      float: left;
+      margin-right: 50px;
+      border-radius: 7%;
+
+    }
+
+    .schedule ul li {
+      line-height: 2;
+
+    }
+
+    /********************** footer 영역 스타일 ***********************/
+    footer {
+      width: 100%; /* 또는 위에서 정의한 1100px로 꽉차게. */
+      height: 100px;
+      border-top: 2px solid #222;
+    }
+
+    #bottomMenu {
+      width: 100%;
+      height: 20px;
+      margin-left: 50px;
+    }
+
+    #bottomMenu ul {
+      margin-top: 20px;
+    }
+
+    #bottomMenu ul li {
+      float: left;
+      padding: 5px 20px;
+      border-right: 1px solid #888;
+    }
+
+    #bottomMenu ul li:last-child {
+      /* 맨 끝에 있는 li에 대해 */
+      border: none; /* border를 없애라 */
+      /*맨 처음 li는 first-child */
+    }
+    #bottomMenu ul li a, #bottomMenu ul li a:visited {
+      font-size: 15px;
+      color: #777;
+    }
+
+
+    
+  </style>
